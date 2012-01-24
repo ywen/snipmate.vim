@@ -440,12 +440,25 @@ snippet tas
 		${3}
 	end
 
+#rails
+# validates_presence_of
+snippet vpo
+	validates_presence_of :${1:attr_names}
+# validates_uniqueness_of
+snippet vuo
+	validates_uniqueness_of :${1:attr_names}
+
 #rspec
 snippet desc describe .. end
 	describe `ClassNameUnderTest()` do
 		before(:each) do
 			${1}
 		end
+	end
+
+snippet bef before(:each).. end
+	before(:each) do
+		${1}
 	end
 
 snippet descs describe {description}
@@ -455,7 +468,7 @@ snippet descs describe {description}
 		end
 	end
 snippet it it simple
-	it "should ${1}" do
+	it "${1}" do
 		${2}
 	end
 snippet itsh it complex 
